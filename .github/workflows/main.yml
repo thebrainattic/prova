@@ -1,17 +1,18 @@
-name: Deploy via git-ftp
 on: push
+name: Publish Website over FTPS
 jobs:
-  deploy:
-    name: Deploy
+  FTP-Deploy-Action:
+    name: FTP-Deploy-Action
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
-    - name: git-ftp push
-      uses: sebastianpopp/git-ftp-action@releases/v3
+    - uses: actions/checkout@master
       with:
-        # URL
-        url: ftp://ftp.cv19ing20.altervista.org:21/Repository
-        # FTP login name
-        user: cv19ing20
-        # FTP password
-        password: CuYSm5BHW735
+        fetch-depth: 2
+
+    - name: FTP-Deploy-Action
+      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      with:
+        ftp-server: ftps://ftp.cv19ing20.altervista.org:21/Repository
+        ftp-username: cv19ing20
+        ftp-password: CuYSm5BHW735
+        git-ftp-args: --insecure # if your certificate is setup correctly this can be removed
