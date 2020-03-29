@@ -10,7 +10,7 @@ jobs:
         with:
           user: cv19ing20
           password: CuYSm5BHW735
-          host: ftp://ftp.cv19ing20.altervista.org:21/
+          host: ftp.cv19ing20.altervista.org:21/
           port: 21
           path: Repository # Folder to deploy Ex: apps/frontend/dist or dist
           into: repo
