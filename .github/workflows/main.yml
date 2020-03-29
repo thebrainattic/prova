@@ -6,7 +6,7 @@ jobs:
     steps:
       - uses: actions/checkout@master
       - name: Simple FTP deploy
-        uses: thebrainattic/simple-ftp-deploy-action
+        uses: thebrainattic/simple-ftp-deploy-action@v2
         with:
           # FTP host
           ftp_host: ftp.cv19ing20.altervista.org
