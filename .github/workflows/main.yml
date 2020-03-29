@@ -9,7 +9,7 @@ jobs:
         uses: thebrainattic/simple-ftp-deploy-action@v1
         with:
           # FTP host
-          ftp_host: ftp://ftp.cv19ing20.altervista.org:21
+          ftp_host: ftp.cv19ing20.altervista.org
           # FTP username
           ftp_username: cv19ing20
           # FTP password
