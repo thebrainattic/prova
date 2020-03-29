@@ -15,7 +15,7 @@ jobs:
           # FTP password
           ftp_password: CuYSm5BHW735
           # The local folder to copy
-          local_source_dir: API
+          local_source_dir: ./
           # The remote folder
           dist_target_dir: Repository
           # Delete files not present in the local folder on the remote folder
